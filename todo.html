@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="./assets/pexels-ketut-subiyanto-4559555.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                AGENDA VAN H. BOGA
+            </div>
+            <div class="theme">
+                <img src="https://img.icons8.com/ios/50/000000/view-shedule.png"/>
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Vul uw agenda in...">
+                </form>
+            </div>
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./assets/icon-check.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- <ul id="todo" class="todo">
+                        <li>This is an example item
+                          <div class="buttons" id="buttons">
+                            <button class="Remove"><i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                            <button class="Complete"><i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                          </div>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    4 items left
+                </div>
+                <!-- <div class="items-statuses">
+                    <span class="active">All</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+                </div> -->
+                <div class="items-clear">
+                    <span>Delete all</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
