@@ -1,3 +1,5 @@
+$base_color: hsl(233, 14%, 35%);
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +12,7 @@ body {
     font-size: 18px;
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
 }
 
 .background-image {
@@ -33,6 +36,14 @@ body {
     max-width: 1000px;
     margin: 0px 30px;
     margin-top: 100px;
+    padding: 70px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    transition: 0.4s all ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 
     .header {
         display: flex;
@@ -40,7 +51,7 @@ body {
         align-items: center;
 
         .title {
-            color: white;
+            color: black;
             letter-spacing: 10px;
             font-size: 50px;
             font-weight: bold;
@@ -134,7 +145,7 @@ body {
 
                 .checked {
                     text-decoration: line-through;
-                    color: hsl(233, 14%, 35%);
+                    color: $base_color;
                 }
             }
 
@@ -201,7 +212,7 @@ body {
             z-index: 100;
             background-color: rgb(218, 0, 0);
             display: flex;
-            border-radius: 50%;
+            border-radius: 10%;
             cursor: pointer;
             transition: all 0.25s;
 
