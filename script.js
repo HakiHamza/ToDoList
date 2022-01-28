@@ -97,18 +97,6 @@ function markCompleted(id) {
   });
 }
 
-function deleteCompleted() {
-  var item = db.collection("todo-items").where("status", "==", "completed");
-  item.get().then(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
-      doc.ref.delete();
-    });
-    countAll();
-    countCompleted();
-    countActive();
-  });
-}
-
 function deleteAll() {
   var item = db.collection("todo-items");
   item.get().then(function (querySnapshot) {
